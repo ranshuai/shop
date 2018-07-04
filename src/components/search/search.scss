@@ -1,0 +1,53 @@
+search { //txt_c A3A3A3 font12
+    text-align: center;
+    display: block;
+    .left{
+        float: left;
+        text-align: center;
+        color: #a3a3a3;
+        font-size: 12px;
+    }
+    .right{
+        float: right;
+        text-align: center;
+        color: #a3a3a3;
+        font-size: 12px;
+    }
+    .search_warp{
+        text-align: left;
+        width: 80%;
+        display: inline-block;
+        margin: 0 auto;
+        color: #a3a3a3;
+        font-size: 12px;
+        background-color: rgba(3, 3, 3, 0.09); 
+        border-radius: 33px;
+        line-height: 28px;
+        padding: 0 18px;
+        ion-icon{
+            vertical-align: middle;
+        }
+       
+    }
+
+    .search2{
+        ion-input{
+            width: 88%;
+            display: inline-block;
+            .text-input-ios{
+                margin: 0;
+            }
+        }
+        .left{
+            ion-icon{
+                line-height: 28px
+            }
+           
+        }
+        .right{
+            p{
+                line-height: 28px
+            }
+        }
+    }
+}
