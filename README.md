@@ -1,14 +1,17 @@
 1.引入字体图标
 <link href="./assets/apollo/style.css" rel="stylesheet">
 
-2.指令
+2.组件
 ionic g component search-component 新建组件
 <search type = 1></search>
 @Input() type; 接收组件在调用时传入的数据。
 
+3.指令
+ionic g directive imgbg
 
 
-3.遇到的问题
+
+4.遇到的问题
  自定义的组件里面引入 ionic的组件报错
  'ion-icon' is not a known element:
     1. If 'ion-icon' is an Angular component, then verify that it is part of this module.

@@ -1,9 +1,25 @@
 <ion-header>
   <ion-navbar>
-        <search type = 1></search>
+    <!-- 搜索 -->
+    <search type=1></search>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+  <!-- 轮播图 -->
+  <div class="slides">
+    <ion-slides>
+      <ion-slide>
+        <img src="http://snsall.oss-cn-qingdao.aliyuncs.com/DF4D69929FD7F405/default/76211/feede390-a2a7-44ea-a5a1-b5b09d960b21.png?x-oss-process=image/resize,m_fixed,h_420,w_750">
+      </ion-slide>
+      <ion-slide>
+          <div [ngImgBg]=''> </div>
+        <!-- <h1 [ngImgBg]> =>Slide 2</h1> -->
+      </ion-slide>
+      <ion-slide >
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides>
+  </div>
 
 </ion-content>

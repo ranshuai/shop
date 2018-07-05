@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // 组件
 import { ComponentsModule } from './../components/components.module';
+import { DirectivesModule } from './../directives/directives.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ComponentsModule } from './../components/components.module';
   ],
   imports: [
       BrowserModule,
-      ComponentsModule,      
+      ComponentsModule,    
+      DirectivesModule,
       IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

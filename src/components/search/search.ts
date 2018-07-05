@@ -23,7 +23,6 @@ export class SearchComponent {
         console.log('Hello SearchComponent Component');
     }
     ngOnInit(): void {
-        console.log(this.type);
     }
 
 }
