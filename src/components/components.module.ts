@@ -1,11 +1,16 @@
+import { DirectivesModule } from './../directives/directives.module';
 import { NgModule } from '@angular/core';
 import { SearchComponent } from './search/search';
-import { IonicModule } from 'ionic-angular'; 
+import { IonicModule } from 'ionic-angular';
+import { SlidesComponent } from './slides/slides'; 
 @NgModule({
-	declarations: [SearchComponent],
+	declarations: [SearchComponent,
+    SlidesComponent],
     imports: [
-        IonicModule
+        IonicModule,
+        DirectivesModule
     ],
-	exports: [SearchComponent]
+	exports: [SearchComponent,
+    SlidesComponent]
 })
 export class ComponentsModule {}

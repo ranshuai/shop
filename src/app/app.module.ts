@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/customer/about/about';
-import { ContactPage } from '../pages/customer/contact/contact';
-import { HomePage } from '../pages/customer/home/home';
-import { TabsPage } from '../pages/customer/tabs/tabs';
+//消费者
+import { CustomerPageModule } from '../pages/customer/customer.module'
+//店铺管理
+import { StorePageModule } from './../pages/store/store.module';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,32 +17,32 @@ import { ComponentsModule } from './../components/components.module';
 import { DirectivesModule } from './../directives/directives.module';
 
 
+//自定义服务
+import { AppConfig } from './AppConfig';
+
+
+
 @NgModule({
-  declarations: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
-  ],
-  imports: [
-      BrowserModule,
-      ComponentsModule,    
-      DirectivesModule,
-      IonicModule.forRoot(MyApp),
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    declarations: [
+        MyApp,
+    ],
+    imports: [
+        BrowserModule,
+        ComponentsModule,
+        DirectivesModule,
+        StorePageModule,
+        CustomerPageModule,
+        IonicModule.forRoot(MyApp),
+    ],
+    bootstrap: [IonicApp],
+    entryComponents: [
+        MyApp,
+    ],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        { provide: ErrorHandler, useClass: IonicErrorHandler },
+        AppConfig
+    ]
 })
-export class AppModule {}
+export class AppModule { }

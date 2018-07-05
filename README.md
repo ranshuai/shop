@@ -1,3 +1,15 @@
+******
+
+项目初始化
+1.加载项目的配置信息
+
+日志 log 
+
+
+******
+
+
+
 1.引入字体图标
 <link href="./assets/apollo/style.css" rel="stylesheet">
 
@@ -6,8 +18,22 @@ ionic g component search-component 新建组件
 <search type = 1></search>
 @Input() type; 接收组件在调用时传入的数据。
 
+<slides></slides>
+
+
+
 3.指令
 ionic g directive imgbg
+ 报错 Can't bind to 'ngImgBg' since it isn't a known property of 'div'
+ <div [ngImgBg] =''> </div>
+在定义指令的时候不引入 @Input() ngImgBg: any; 就报错。
+
+import { Directive,Input,ElementRef,Renderer } from '@angular/core';
+ElementRef dom节点 Renderer 渲染器
+@Directive({
+  selector: '[ngImgBg]' // Attribute selector
+})
+<div ngImgBg =''> </div>
 
 
 
@@ -24,4 +50,17 @@ ionic g directive imgbg
             imports: [IonicModule],
             ...
         })
+
+<slides></slides> 鼠标触发事件之后不能自动轮播的bug
+ionSlideAutoplayStop 重新调用自动轮播的方法
+
+<ion-nav ng-reflect-root="function StoreTabsPage() {>
+标签里面不显示 组件的名称 <page-tab-menu>  普通加载的方式
+
+<ion-nav ng-reflect-root="function StoreTabsPage() {>
+标签里面显示 组件的名称 <page-tab-menu>  懒加载的方式
+
+
+
+
 
