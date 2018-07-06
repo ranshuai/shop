@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Platform,App } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -16,7 +16,7 @@ import { AppConfig } from './AppConfig';
 })
 export class MyApp {
     rootPage: any;
-    constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private appConfig:AppConfig) {
+    constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private appConfig:AppConfig,public app:App) {
         platform.ready().then(() => {
             console.log(appConfig.init.IS_DEBUG);
             this.rootPage = CustomerPage;
@@ -24,6 +24,11 @@ export class MyApp {
             // Here you can do any higher level native things you might need.
             statusBar.styleDefault();
             splashScreen.hide();
+
+            this.app.viewDidEnter.subscribe(view => { 
+                console.log(this.app.getRootNavById('n4'));
+            })
+
         });
     }
 }

@@ -7,8 +7,57 @@
 
 <ion-content>
   <!-- 轮播图 -->
-  <div class="slides">
-    <slides></slides>
-  </div>
+  <slides type="default"></slides>
+  <!-- 二级导航 -->
+  <two-level></two-level>
+  <!-- 平台快报 -->
+  <platform-msg></platform-msg>
+  <!-- 热销商品 -->
+  <div>
+    <div class="title">
+      热 · 销 · 商 · 品
+      <span>
+        更多商品
+        <ion-icon class="ion-ios-icon-gxk-51 "></ion-icon>
+      </span>
+    </div>
 
+    <div class="list">
+      <ion-slides [slidesPerView]="2.35" [spaceBetween]="6" speed="100" >
+        <ion-slide>
+            <img src="http://snsall.oss-cn-qingdao.aliyuncs.com/DF4D69929FD7F405/goods/78301/c84e242a-5c8e-4ea7-a097-a02efe59dcda.jpg?x-oss-process=image/resize,m_fixed,h_284,w_284" alt="图片">
+          <div class="info">
+            <p>
+              山西武乡
+            </p>
+            <p>
+              {{6.90}}
+            </p>
+          </div>
+        </ion-slide>
+        <ion-slide>
+            <img src="http://snsall.oss-cn-qingdao.aliyuncs.com/DF4D69929FD7F405/goods/78301/c84e242a-5c8e-4ea7-a097-a02efe59dcda.jpg?x-oss-process=image/resize,m_fixed,h_284,w_284" alt="图片">
+          <div class="info">
+            <p>
+              山西武乡
+            </p>
+            <p>
+              {{6.90}}
+            </p>
+          </div>
+        </ion-slide>
+        <ion-slide>
+            <img src="http://snsall.oss-cn-qingdao.aliyuncs.com/DF4D69929FD7F405/goods/78301/c84e242a-5c8e-4ea7-a097-a02efe59dcda.jpg?x-oss-process=image/resize,m_fixed,h_284,w_284" alt="图片">
+          <div class="info">
+            <p>
+              山西武乡
+            </p>
+            <p>
+              {{6.90}}
+            </p>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
 </ion-content>

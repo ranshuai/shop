@@ -1,5 +1,5 @@
+import { CommonProvider } from './../../providers/common/common';
 import { Component, Input } from '@angular/core';
-
 /**
  * Generated class for the SearchComponent component.
  *
@@ -19,10 +19,14 @@ export class SearchComponent {
 
     text: string;
 
-    constructor() {
+    constructor(private commonProvider:CommonProvider) {
         console.log('Hello SearchComponent Component');
     }
     ngOnInit(): void {
     }
 
+    roleChange() { 
+        console.log('角色切换');
+        this.commonProvider.setRootPage('StorePage')
+    }
 }

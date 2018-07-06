@@ -1,5 +1,5 @@
-import { Component,ViewChild } from '@angular/core';
-import { Slides} from 'ionic-angular'
+import { Component, ViewChild,Input } from '@angular/core';
+import { Slides } from 'ionic-angular'
 /**
  * Generated class for the SlidesComponent component.
  *
@@ -7,20 +7,22 @@ import { Slides} from 'ionic-angular'
  * Components.
  */
 @Component({
-  selector: 'slides',
-  templateUrl: 'slides.html'
+    selector: 'slides',
+    templateUrl: 'slides.html'
 })
 export class SlidesComponent {
     @ViewChild('ionSlides') slide: Slides;
-  text: string;
-
-  constructor() {
-    console.log('Hello SlidesComponent Component');
-    this.text = 'Hello World';
-  }
+    @Input() type: string;
+    text: string;
     
-  autoPlay() { 
-    if( this.slide)
-      this.slide.startAutoplay();
-  }
+
+    constructor() {
+        console.log('Hello SlidesComponent Component');
+        this.text = 'Hello World';
+    }
+
+    autoPlay() {
+        if (this.slide)
+            this.slide.startAutoplay();
+    }
 }

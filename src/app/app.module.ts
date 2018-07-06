@@ -7,6 +7,8 @@ import { MyApp } from './app.component';
 import { CustomerPageModule } from '../pages/customer/customer.module'
 //店铺管理
 import { StorePageModule } from './../pages/store/store.module';
+//中转页面
+import { SpringboardPageModule } from './../pages/springboard/springboard.module';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,6 +21,7 @@ import { DirectivesModule } from './../directives/directives.module';
 
 //自定义服务
 import { AppConfig } from './AppConfig';
+import { CommonProvider } from '../providers/common/common';
 
 
 
@@ -32,6 +35,7 @@ import { AppConfig } from './AppConfig';
         DirectivesModule,
         StorePageModule,
         CustomerPageModule,
+        SpringboardPageModule,
         IonicModule.forRoot(MyApp),
     ],
     bootstrap: [IonicApp],
@@ -42,7 +46,8 @@ import { AppConfig } from './AppConfig';
         StatusBar,
         SplashScreen,
         { provide: ErrorHandler, useClass: IonicErrorHandler },
-        AppConfig
+        AppConfig,
+        CommonProvider
     ]
 })
 export class AppModule { }
