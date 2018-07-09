@@ -21,7 +21,7 @@ export class CommonProvider {
           },
             { animate: false }
           ) .then(() => {
-            this.app.getRootNav().popToRoot();
+            // this.app.getRootNav().popToRoot();
           })
     }
 

@@ -9,5 +9,9 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
+    
+    goToDetail() {
+        this.navCtrl.push('GooodsDetailPage');
+    }
 
 }

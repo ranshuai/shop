@@ -20,8 +20,8 @@ export class SpringboardPage {
             case 'root':
             this.app.getRootNav().setRoot(this.navParams.get('page'), {}, 
               {animate: true}
-            ) .then(() =>{
-              this.app.getRootNav().popToRoot();
+            ).then(() => {
+            //   this.app.getRootNav().popToRoot();
           }) 
             break;
             default:

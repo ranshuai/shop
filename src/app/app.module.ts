@@ -36,7 +36,11 @@ import { CommonProvider } from '../providers/common/common';
         StorePageModule,
         CustomerPageModule,
         SpringboardPageModule,
-        IonicModule.forRoot(MyApp),
+        IonicModule.forRoot(MyApp, {
+            mode: 'ios',//android是'md'
+            backButtonText: '',
+            tabsHideOnSubPages: true//隐藏子菜单 by mwh
+        }),
     ],
     bootstrap: [IonicApp],
     entryComponents: [

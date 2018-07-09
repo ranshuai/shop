@@ -60,6 +60,13 @@ ionSlideAutoplayStop 重新调用自动轮播的方法
 <ion-nav ng-reflect-root="function StoreTabsPage() {>
 标签里面显示 组件的名称 <page-tab-menu>  懒加载的方式
 
+跳转二级页面 底部tab导航没有隐藏的bug
+IonicModule.forRoot(MyApp, {
+            mode: 'ios',//android是'md'
+            backButtonText: '',
+            tabsHideOnSubPages: true//隐藏子菜单
+        }),
+
 
 
 
