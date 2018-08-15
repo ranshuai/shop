@@ -22,6 +22,7 @@ import { DirectivesModule } from './../directives/directives.module';
 //自定义服务
 import { AppConfig } from './AppConfig';
 import { CommonProvider } from '../providers/common/common';
+import { CommonModelProvider } from '../providers/common-model/common-model';
 
 
 
@@ -51,7 +52,8 @@ import { CommonProvider } from '../providers/common/common';
         SplashScreen,
         { provide: ErrorHandler, useClass: IonicErrorHandler },
         AppConfig,
-        CommonProvider
+        CommonProvider,
+    CommonModelProvider
     ]
 })
 export class AppModule { }

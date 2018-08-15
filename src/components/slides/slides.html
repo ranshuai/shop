@@ -1,6 +1,6 @@
 <!-- Generated template for the SlidesComponent component -->
 <!-- 首页轮播图 -->
-<ion-slides *ngIf="type == 'default'"  #ionSlides autoplay="3000" pager loop (ionSlideAutoplayStop)="autoPlay()">
+<ion-slides *ngIf="type == 'default'"  #ionSlides autoplay="3000" pager loop >
   <ion-slide>
     <div ngImgBg="'http://snsall.oss-cn-qingdao.aliyuncs.com/DF4D69929FD7F405/default/76211/feede390-a2a7-44ea-a5a1-b5b09d960b21.png?x-oss-process=image/resize,m_fixed,h_420,w_750'">
     </div>
@@ -16,7 +16,7 @@
 
 
 <!-- 平台快报的slides -->
-<ion-slides *ngIf="type == 'platform'"  #ionSlides loop autoplay='3000' direction="vertical" (ionSlideAutoplayStop)="autoPlay()">
+<ion-slides *ngIf="type == 'platform'"  #ionSlides loop autoplay='3000' direction="vertical"  (ionSlideAutoplayStop)="autoPlay()">
         <ion-slide>
           <div class="content">
             <span>2222</span>

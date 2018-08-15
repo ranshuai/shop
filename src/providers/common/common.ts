@@ -10,7 +10,7 @@ import { App } from 'ionic-angular';
 @Injectable()
 export class CommonProvider {
 
-    constructor( private app:App) {
+    constructor(private app: App) {
         console.log('Hello CommonProvider Provider');
     }
 
@@ -18,11 +18,11 @@ export class CommonProvider {
         this.app.getRootNav().setRoot('SpringboardPage', {
             type: 'root',
             page: page
-          },
+        },
             { animate: false }
-          ) .then(() => {
+        ).then(() => {
             // this.app.getRootNav().popToRoot();
-          })
+        })
     }
 
 }

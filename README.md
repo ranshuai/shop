@@ -5,7 +5,6 @@
 
 日志 log 
 
-
 ******
 
 
@@ -19,8 +18,6 @@ ionic g component search-component 新建组件
 @Input() type; 接收组件在调用时传入的数据。
 
 <slides></slides>
-
-
 
 3.指令
 ionic g directive imgbg
@@ -66,6 +63,10 @@ IonicModule.forRoot(MyApp, {
             backButtonText: '',
             tabsHideOnSubPages: true//隐藏子菜单
         }),
+
+
+
+
 
 
 

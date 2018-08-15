@@ -21,7 +21,13 @@ export class SlidesComponent {
         this.text = 'Hello World';
     }
 
+
     autoPlay() {
+        if (this.slide)
+            this.slide.startAutoplay();
+    }
+    
+    stopAutoplay() { 
         if (this.slide)
             this.slide.startAutoplay();
     }
